@@ -1,40 +1,22 @@
 # Tele2
 ## Location attractiveness assessing
-### Description
+### Task
+Building a model for assessing the attractiveness of a location for opening a retail outlet.
+### Data
+1. Hexagonal grid for the territory of St. Petersburg, containing the following information:
+- Number of residents (by gender, age, income level)
+- Number of visitors per day
+2. Data on points of interest (POI) in the city (OpenStreetMap)
+3. Transport network data (OpenStreetMap)
 
-
-
-Построение модели оценки привлекательности местоположения для открытия торговой точки.
-Данные:
-1.	Гексагональная сетка на территорию г. Санкт-Петербург, содержащая следующую информацию:
-a.	Количество жителей (с разбивкой по полу, возрасту, уровню дохода)
-b.	Количество посетителей в дневной период
-2.	Данные о точках интереса (POI) на территорию города (OpenStreetMap)
-3.	Данные о транспортной сети (OpenStreetMap)
-
-Примерный алгоритм решения задачи:
-1.	Определить набор признаков\факторов, которыми может быть описана территория и которые могут оказывать влияние на успешность ведения определенного типа бизнеса.
-2.	Определить какие дополнительные открытые источники данных могут быть полезны в проработке кейса. Собрать эти данные.
-3.	Выполнить расчет признаков на гексагональную сетку (один гексагон – участок территории города описывается набором факторов\признаков).
-4.	Выбрать анализируемый вид бизнеса (можно взять определенную категорию POI из ОСМ, можно разделить на данные одной компании против остальных как данные о конкурентах).
-5.	Провести статистический анализ данных – какие факторы влияют на размещение торговых точек данного типа.
-6.	В идеале, построить ML-модель, которая позволит оценить другие привлекательные местоположения для открытия торговых точек и оценить влияние факторов (feature importance)
-7.	Подготовить презентацию, в том числе гипотезы по улучшению решения (какие подходы можно было бы еще попробовать, какие факторы и данные нужны для улучшения решения, описание архитектуры аналитического решения, как осуществляется валидация результатов)
-Альтернативный вариант: взять похожую задачу, но не с точки зрения бизнеса, а с точки зрения социальной инфраструктуры -  оценить эффективность размещения сети поликлиник, школ или детских садов.
- 
-Кейс 2. Определение точек притяжения людей и сегментация клиентов
-Данные:
-1.	Гексагональная сетка на территорию г. Санкт-Петербург
-2.	Точки и время посещения мест людьми
-3.	Пол, возраст, уровень дохода человека
-4.	Данные о точках интереса (POI) на территорию города (OpenStreetMap)
-5.	Данные о транспортной сети (OpenStreetMap)
-
-Примерный алгоритм решения задачи:
-1.	Выполнить кластеризацию точек посещения (с учетом временных факторов – время суток, день недели) – определить для каждого человека сколько устойчивых локаций он посещает. 
-2.	Определить какие типы объектов (POI) представлены для каждого кластера – построить гипотезы с какой целью человек мог посещать данное место.
-3.	Выделить какие локации притягивают максимальное количество людей, в какое время
-4.	Продумать на какие сегменты можно разделить людей по факторам георасположения (стабильное место работы или динамическое – в различных местах, по удаленности места работы и т.п.)
-5.	Провести статистический анализ данных и подготовить аналитический отчет.
-6.	Подготовить презентацию, в том числе гипотезы по улучшению решения (какие подходы можно было бы еще попробовать, какие факторы и данные нужны для улучшения решения, описание архитектуры аналитического решения, как осуществляется валидация результатов)
+### An algorithm for solving the problem
+1. Determine a set of characteristics/factors that can describe a territory and that can influence the success of running a certain type of business.
+2. Determine what additional open data sources may be useful in developing the case. Collect this data.
+3. Perform the calculation of features on a hexagonal grid (one hexagon - a section of the city territory is described by a set of factors/signs).
+4. Select the type of business being analyzed (you can take a certain category of POI from OSM, you can divide it into data from one company against the rest as data on competitors).
+5. Conduct a statistical analysis of the data - what factors influence the placement of retail outlets of this type.
+6. Build an ML model that will allow you to evaluate other attractive locations for opening retail outlets and evaluate the influence of factors (feature importance)
+7. Prepare a presentation, including hypotheses for improving the solution (what other approaches could be tried, what factors and data are needed to improve the solution, a description of the architecture of the analytical solution, how the results are validated)
+   
+An alternative option: take a similar task, but not from a business point of view, but from the point of view of social infrastructure - to evaluate the effectiveness of placing a network of clinics, schools or kindergartens.
 
